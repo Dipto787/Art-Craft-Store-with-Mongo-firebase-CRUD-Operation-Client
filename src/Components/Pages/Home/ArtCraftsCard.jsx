@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
  
 const ArtCraftsCard = () => {
@@ -19,7 +19,7 @@ const ArtCraftsCard = () => {
                       <h2 className="card-title">{card.storeName}</h2>
                       <p>{card.description}</p>
                       <div className="card-actions justify-end">
-                        <button className="btn w-full bg-[#ff595e] text-white font-bold">View Details</button>
+                        <Link to={`artCraftCardDetails/${card.id}`} className="btn w-full bg-[#ff595e] text-white font-bold">View Details</Link>
                       </div>
                     </div>
                   </div>))
