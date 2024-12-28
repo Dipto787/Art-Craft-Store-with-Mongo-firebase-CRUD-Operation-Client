@@ -3,12 +3,12 @@ import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Provider/AuthProvider';
 
 const Navbar = () => {
-    let { user,logOut } = useContext(AuthContext);
+    let { user,logOut,loader } = useContext(AuthContext);
     console.log(user)
     let Links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/allArtItems'>All Art & craft Items</NavLink></li>
-        <li><NavLink to='/addCraft'>Add Craft Item</NavLink></li>
+        <li><NavLink to='/addCraftItem'>Add Craft Item</NavLink></li>
         <li><NavLink to='/myArtCraft'>My Art&Craft List</NavLink></li>
 
     </>

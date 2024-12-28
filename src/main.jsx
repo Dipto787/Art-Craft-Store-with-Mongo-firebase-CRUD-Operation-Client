@@ -9,6 +9,8 @@ import ArtCraftCardDetails from './Components/Pages/Art&CraftCardDetails.jsx'
 import Register from './Components/Pages/Register/Register.jsx'
 import Login from './Components/Pages/Login/Login.jsx'
 import AuthProvider from './Provider/AuthProvider.jsx'
+import AddCraftItem from './Components/Pages/AddCraftItem.jsx'
+import ProtectedRoute from './Components/ProtectedRoute.jsx'
 let router = createBrowserRouter([
   {
     path: '/',
@@ -31,6 +33,10 @@ let router = createBrowserRouter([
       {
         path: '/login',
         element: <Login></Login>
+      },
+      {
+        path:'/addCraftItem',
+        element:<ProtectedRoute><AddCraftItem></AddCraftItem></ProtectedRoute>
       }
     ]
   }
